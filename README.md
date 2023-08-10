@@ -7,7 +7,7 @@ Then using the songs genre or artist name, create a playlist of potential songs 
 The project remains currently unfinished due to Spotify removing their API token from free use and requesting that developer accounts be created.
 
 Fetures currently available:
-	- List of recently played songs presented
+  - List of recently played songs presented
   - CRUD options available for the list as well
   - Like button present that automatically likes the song on Spotify as well
   - Search bar that searches for all the songs and artisti with the name entered.
