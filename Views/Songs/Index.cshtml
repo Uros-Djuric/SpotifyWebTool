@@ -1,0 +1,40 @@
+﻿@model IEnumerable<SpotifyApp.Models.Song>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArtistName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SongName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaveSong)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ArtistName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SongName)
+                </td>
+                <th>
+                    <input type="button" value="Save Song" onclick="location.href='@Url.Action($"SaveSong", "Songs", new {songname = item.SpotifyId})'" />
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
